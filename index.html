@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills & Knowledge Search Wizard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="content">
+        <h1>Skills &amp; Knowledge Search Wizard</h1>
+        <p>
+          Tell us who you are and what you would like to explore. The wizard will
+          highlight curated learning experiences across courses, workshops,
+          podcasts, and videos that match your interests.
+        </p>
+      </div>
+    </header>
+    <main class="content">
+      <section class="wizard-card" aria-labelledby="wizard-heading">
+        <h2 id="wizard-heading">Start the wizard</h2>
+        <form id="wizard-form" class="wizard-form">
+          <div class="form-field">
+            <label for="audience">I am a&hellip;</label>
+            <select id="audience" name="audience" required>
+              <option value="" disabled selected>Select your background</option>
+              <option value="academic">Academic or researcher</option>
+              <option value="healthcare">Healthcare professional</option>
+              <option value="private">Private company professional</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="interest">I want to learn more about</label>
+            <input
+              type="text"
+              id="interest"
+              name="interest"
+              placeholder="e.g. AI ethics, clinical data, change management"
+              autocomplete="off"
+            />
+          </div>
+          <button type="submit" class="primary-button">Show recommendations</button>
+        </form>
+      </section>
+
+      <section id="results" class="results" aria-live="polite">
+        <div class="results-header">
+          <h2 id="results-heading">Recommendations</h2>
+          <p id="results-summary" class="results-summary">
+            Choose your background and topic to see curated recommendations.
+          </p>
+        </div>
+        <div id="results-list" class="results-list"></div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="content">
+        <p>
+          Can&apos;t find what you need? Reach out to our team at
+          <a href="mailto:wizard@example.com">wizard@example.com</a> for
+          personalised guidance.
+        </p>
+      </div>
+    </footer>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
